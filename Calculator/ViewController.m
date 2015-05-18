@@ -26,10 +26,40 @@
     [[self lblanswer] setText:inStr];
 
 }
+- (IBAction)Subtract:(id)sender {
+    NSString* numbervalue1 = [[self txt1] text];
+    NSString* numbervalue2 = [[self txt2] text];
+    NSInteger number1 = [numbervalue1 integerValue];
+    NSInteger number2 = [numbervalue2 integerValue];
+    NSInteger Answer = number1 - number2;
+    NSString *inStr = [NSString stringWithFormat: @"%ld", Answer];
+    [[self lblanswer] setText:inStr];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+- (IBAction)Multiply:(id)sender {
+    NSString* numbervalue1 = [[self txt1] text];
+    NSString* numbervalue2 = [[self txt2] text];
+    NSInteger number1 = [numbervalue1 integerValue];
+    NSInteger number2 = [numbervalue2 integerValue];
+    NSInteger Answer = number1 * number2;
+    NSString *inStr = [NSString stringWithFormat: @"%ld", Answer];
+    [[self lblanswer] setText:inStr];
+    
+}
+- (IBAction)Divide:(id)sender {
+    NSString* numbervalue1 = [[self txt1] text];
+    NSString* numbervalue2 = [[self txt2] text];
+    NSInteger number1 = [numbervalue1 integerValue];
+    NSInteger number2 = [numbervalue2 integerValue];
+    NSInteger Answer = number1 / number2;
+    NSString *inStr = [NSString stringWithFormat: @"%ld", Answer];
+    [[self lblanswer] setText:inStr];
+    
 }
 
 - (void)didReceiveMemoryWarning {
