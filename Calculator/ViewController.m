@@ -13,9 +13,21 @@
 @property (weak, nonatomic) IBOutlet UITextField *txt2;
 @property (weak, nonatomic) IBOutlet UILabel *lblanswer;
 
+
 @end
 
 @implementation ViewController
+-(NSInteger) getInterger: (UITextField *)txt{
+    NSString* number1 = [txt text];
+    
+    NSInteger interger1 = [number1 integerValue];
+    return interger1;
+}
+-(bool) isValid:(NSString*) s{
+    NSCharacterSet* alphaNums = [NSCharacterSet decimalDigitCharacterSet];
+    NSCharacterSet* inStringSet = [NSCharacterSet characterSetWithCharactersInString:s];
+    return [alphaNums isSupersetOfSet:inStringSet];
+}
 - (IBAction)button:(id)sender {
     NSString* numbervalue1 = [[self txt1] text];
     NSString* numbervalue2 = [[self txt2] text];
@@ -66,5 +78,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end
