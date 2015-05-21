@@ -10,7 +10,7 @@
 
 @interface ViewController : UIViewController
 
--(bool) isValid:(NSString*) s;
+-(bool) isValid:(NSString *) s;
 
 
 @end
